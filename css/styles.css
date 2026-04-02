@@ -15,6 +15,80 @@
     --bg-tint: #EFF6FF;
     /* Very light blue tint for subtle sections */
 
+    /* Contact Section Improvements */
+.contact-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: stretch;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.direct-call-box {
+    flex: 1;
+    background: linear-gradient(135deg, var(--bg-tint) 0%, #ffffff 100%);
+    border: 1px solid #BFDBFE;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-icon {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    animation: vibrate 2s infinite;
+}
+
+.direct-call-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.direct-call-box p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+    max-width: 400px;
+}
+
+.cta-note {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.btn-lg {
+    padding: 20px 40px;
+    font-size: 1.15rem;
+}
+
+@keyframes vibrate {
+    0% { transform: rotate(0); }
+    10% { transform: rotate(-5deg); }
+    20% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    40% { transform: rotate(5deg); }
+    50% { transform: rotate(0); }
+    100% { transform: rotate(0); }
+}
+
+@media (max-width: 850px) {
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
     /* Text */
     --text-dark: #0F172A;
     /* Slate 900 for high contrast readability */

@@ -60,53 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Form submission (Simulated CRM Integration)
-    const leadForm = document.getElementById('leadForm');
-    const formSuccess = document.getElementById('formSuccess');
-
-    if (leadForm) {
-        leadForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone_input').value;
-
-            // Simple validation
-            if (name && phone) {
-                // Simulate an API call to a CRM
-                const button = leadForm.querySelector('button');
-                const originalText = button.textContent;
-                button.textContent = 'Отправка...';
-                button.disabled = true;
-
-                setTimeout(() => {
-                    // Success!
-                    leadForm.style.display = 'none';
-                    formSuccess.style.display = 'block';
-
-                    // console output to simulate CRM tracking
-                    console.log('--- NEW LEAD REGISTERED ---');
-                    console.log('Name:', name);
-                    console.log('Phone:', phone);
-                    console.log('Notification sent to owner channel.');
-
-                }, 1500);
-            }
-        });
-    }
-
-    // 4. Input Masking (Simple version for formatting phone number)
-    const phoneInput = document.getElementById('phone_input');
-    if (phoneInput) {
-        phoneInput.addEventListener('input', function (e) {
-            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
-            if (!x[2]) {
-                e.target.value = '+7';
-            } else {
-                e.target.value = '+7' + (x[2] ? ' (' + x[2] : '') + (x[3] ? ') ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
-            }
-        });
-    }
+    // 3. Form logic removed (direct call approach)
 });
 
 // Helper function attached to window for inline onclick="scrollToContact()"
