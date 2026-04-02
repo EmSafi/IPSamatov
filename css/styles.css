@@ -187,6 +187,7 @@ img {
 .logo-text {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .logo-brand {
@@ -291,12 +292,9 @@ img {
         gap: 20px;
     }
 
-    .header-contact .btn {
-        display: none;
-    }
-
+    .header-contact .btn,
     .header-city {
-        display: flex;
+        display: none;
     }
 
     .burger-menu {
@@ -321,14 +319,15 @@ img {
     }
 
     .logo-brand {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .logo-title {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
+        max-width: 150px;
+        line-height: 1.1;
     }
 
-    .city-text,
     .phone-text {
         display: none;
         /* Hide text on small screens, keep only icons */
