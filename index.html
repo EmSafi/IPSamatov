@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АкваТехПрофи — Ремонт водонагревателей и насосов в Уфе</title>
+    <meta name="description"
+        content="Официальный сервисный центр «АкваТехПрофи» по ремонту водонагревателей и бытовых насосов в Уфе. Гарантия, выезд на дом за 1 час.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="АкваТехПрофи логотип" class="logo-svg">
+                <div class="logo-text">
+                    <span class="logo-brand">АкваТехПрофи</span>
+                    <span class="logo-title">Ремонт водонагревателей и насосов</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#benefits">Преимущества</a></li>
+                    <li><a href="#about">О мастере</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <div class="header-city" onclick="document.getElementById('yandex-map').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;" title="Показать на карте"><i class="fa-solid fa-location-dot"></i> г. Уфа</div>
+                <div class="phone"><i class="fa-solid fa-phone"></i> <span class="phone-text">+7 (917) 747-37-00</span></div>
+                <button class="btn btn-primary btn-sm" onclick="scrollToContact()">Вызвать мастера</button>
+            </div>
+            <div class="burger-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content" data-aos="fade-right">
+                <div class="badge">Официальная гарантия от производителя</div>
+                <h1 class="hero-title">Профессиональный ремонт водонагревателей и бытовых насосов в Уфе</h1>
+                <p class="hero-subtitle">Обращайтесь в официальный сервисный центр <strong>«АкваТехПрофи»</strong>. Выполняем профессиональный ремонт в нашей мастерской или <strong>с выездом на дом</strong> по всей Уфе. Качество и надежность в каждый дом.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToContact()">Вызвать мастера</button>
+                    <span class="hero-phone" style="font-weight: 700; font-size: 1.2rem; color: var(--primary-color);">+7 (917) 747-37-00</span>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <img src="img/hero.png" alt="Ремонт водонагревателей" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section benefits bg-light" id="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="benefit-icon"><i class="fa-solid fa-file-contract"></i></div>
+                    <h3 class="benefit-title">Официальная гарантия</h3>
+                    <p class="benefit-text">Предоставляем официальный документ, как в магазине.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h3 class="benefit-title">Бесплатная диагностика</h3>
+                    <p class="benefit-text">При согласии на ремонт выезд и диагностика 0 руб.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon"><i class="fa-solid fa-toolbox"></i></div>
+                    <h3 class="benefit-title">Оригинальные запчасти</h3>
+                    <p class="benefit-text">Используем только сертифицированные детали от производителей.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon"><i class="fa-solid fa-user-gear"></i></div>
+                    <h3 class="benefit-title">Опыт 10+ лет</h3>
+                    <p class="benefit-text">Профессиональный мастер с профильным образованием.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services bg-tint" id="services">
+        <div class="container">
+            <h2 class="section-title">Услуги и цены</h2>
+            <p class="section-subtitle" style="margin-bottom: 15px;">Точная цена озвучивается после диагностики. Цены указаны без учета стоимости запчастей.</p>
+            <div class="warning-alert" style="background: #FFF7ED; border: 1px solid #FED7AA; border-radius: 8px; padding: 15px 20px; max-width: 650px; margin: 0 auto 35px auto; display: flex; align-items: center; justify-content: flex-start; gap: 15px; color: #9A3412; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                <i class="fa-solid fa-triangle-exclamation" style="font-size: 1.4rem; color: var(--secondary-color);"></i>
+                <span style="font-weight: 500; font-size: 0.95rem; text-align: left;">В случае отказа от ремонта диагностика оплачивается согласно прейскуранту</span>
+            </div>
+            
+            <div class="services-container">
+                <!-- Heaters Service Box -->
+                <div class="service-box" id="heaters" data-aos="fade-up">
+                    <h3 class="service-box-title">Ремонт водонагревателей и техники</h3>
+                    <ul class="service-list">
+                        <li><span class="service-name">Диагностика водонагревателя</span><span class="service-price">1000 ₽</span></li>
+                        <li><span class="service-name">Замена ТЭНа / очистка от накипи *</span><span class="service-price">от 1650/2500 ₽ **</span></li>
+                        <li><span class="service-name">Ремонт электрического котла отопления</span><span class="service-price">1500/2500 ₽ **</span></li>
+                        <li><span class="service-name">Ремонт проточного водонагревателя</span><span class="service-price">800 ₽</span></li>
+                        <li><span class="service-name">Ремонт электрического конвектора</span><span class="service-price">1000 ₽</span></li>
+                        <li><span class="service-name">Ремонт электрической тепловой завесы</span><span class="service-price">1900 ₽</span></li>
+                        <li><span class="service-name">Ремонт газовой пушки</span><span class="service-price">1850 ₽</span></li>
+                        <li><span class="service-name">Ремонт электрической пушки</span><span class="service-price">1700 ₽</span></li>
+                        <li><span class="service-name">Запуск эл. котла с постановкой на гарантию</span><span class="service-price">5000 ₽</span></li>
+                    </ul>
+                    <div style="font-size: 0.8rem; color: var(--text-light); margin-top: 15px; line-height: 1.5;">
+                        <div>* цена зависит от объема водонагревателя</div>
+                        <div>** цены (через дробь): ремонт в сервисе / с выездом на дом</div>
+                    </div>
+                    <div style="background: var(--bg-tint); border: 1px solid #BFDBFE; border-radius: 8px; padding: 15px; margin-top: 20px; font-size: 0.9rem; color: var(--primary-color); display: flex; align-items: flex-start; gap: 10px;">
+                        <i class="fa-solid fa-circle-info" style="margin-top: 3px; font-size: 1.1rem;"></i>
+                        <span><b>Важно:</b> Водонагреватели после ремонта в обязательном порядке проходят проверку и опрессовку на стенде в режиме нагрева.</span>
+                    </div>
+                </div>
+
+                <!-- Pumps Service Box -->
+                <div class="service-box" id="pumps" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="service-box-title">Ремонт бытовых насосов</h3>
+                    <ul class="service-list">
+                        <li><span class="service-name">Дренажные насосы</span><span class="service-price">600/1300 ₽ *</span></li>
+                        <li><span class="service-name">Погружные скважинные (центробежные)</span><span class="service-price">1200/3100 ₽ *</span></li>
+                        <li><span class="service-name">Погружные скважинные (винтовые)</span><span class="service-price">800/1700 ₽ *</span></li>
+                        <li><span class="service-name">Станции автоматического водоснабжения</span><span class="service-price">1000/2450 ₽ *</span></li>
+                        <li><span class="service-name">Поверхностные насосы</span><span class="service-price">800/2200 ₽ *</span></li>
+                        <li><span class="service-name">Установка термоусадочной муфты</span><span class="service-price">1850 ₽ **</span></li>
+                        <li><span class="service-name">Фекальные насосы</span><span class="service-price">1200/2500 ₽ *</span></li>
+                        <li><span class="service-name">Поверхностные многоступенчатые насосы</span><span class="service-price">1500/3500 ₽ *</span></li>
+                        <li><span class="service-name">Насосные станции (Италия)</span><span class="service-price">1800/5600 ₽ *</span></li>
+                        <li><span class="service-name">Погружные насосы (Италия)</span><span class="service-price">2100/7600 ₽ *</span></li>
+                    </ul>
+                    <div style="font-size: 0.8rem; color: var(--text-light); margin-top: 15px; line-height: 1.5;">
+                        <div>* цены (через дробь): стоимость диагностики / цена ремонта</div>
+                        <div>** цена указана с учетом стоимости самой термомуфты</div>
+                    </div>
+                    <div style="background: var(--bg-tint); border: 1px solid #BFDBFE; border-radius: 8px; padding: 15px; margin-top: 20px; font-size: 0.9rem; color: var(--primary-color); display: flex; align-items: flex-start; gap: 10px;">
+                        <i class="fa-solid fa-circle-info" style="margin-top: 3px; font-size: 1.1rem;"></i>
+                        <span><b>Важно:</b> Диагностика и проверка насосов после ремонта производятся с использованием гидравлического сервисного стенда.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="section brands bg-light">
+        <div class="container">
+            <h3 class="brands-title">Обслуживаем все популярные бренды:</h3>
+            <div class="brands-logos">
+                <div class="brand-item">Thermex</div>
+                <div class="brand-item">Ariston</div>
+                <div class="brand-item">Unipump</div>
+                <div class="brand-item">Electrolux</div>
+                <div class="brand-item">Gorenje</div>
+                <div class="brand-item">Bosch</div>
+            </div>
+            <p class="brands-subtitle">Официальная гарантия на эти марки.</p>
+        </div>
+    </section>
+
+    <!-- Scheme of Work Section -->
+    <section class="section scheme" id="scheme">
+        <div class="container">
+            <h2 class="section-title">Схема работы</h2>
+            <div class="steps-grid">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-number"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <h4 class="step-title">Заявка</h4>
+                    <p class="step-text">Оставляете заявку на сайте или по телефону.</p>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                    <h4 class="step-title">Прием или Выезд</h4>
+                    <p class="step-text">Принимаем технику в сервисе или бесплатно выезжаем к вам по всей Уфе.</p>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number"><i class="fa-solid fa-handshake"></i></div>
+                    <h4 class="step-title">Согласование</h4>
+                    <p class="step-text">Озвучиваем точную стоимость до начала работ.</p>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h4 class="step-title">Ремонт</h4>
+                    <p class="step-text">Быстро чиним с использованием оригинальных запчастей.</p>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number"><i class="fa-solid fa-shield-check"></i></div>
+                    <h4 class="step-title">Гарантия</h4>
+                    <p class="step-text">Выписываем официальный гарантийный талон.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warranty Section -->
+    <section class="section warranty bg-primary text-white">
+        <div class="container warranty-container">
+            <div class="warranty-content">
+                <h2>Официальная гарантия на ремонт</h2>
+                <p>Мы уверены в качестве наших услуг и используемых запчастей. Поэтому выдаем официальный документ, как в магазине.</p>
+                <div class="warranty-alert">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>При повторной поломке по нашей вине – ремонт абсолютно <strong>БЕСПЛАТНО</strong>.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section (Hidden for now)
+    <section class="section reviews bg-tint" id="reviews">
+        ...
+    </section>
+    -->
+
+    <!-- About Master Section -->
+    <section class="section about bg-light" id="about">
+        <div class="container about-container">
+            <div class="about-image" data-aos="fade-right">
+                <img src="img/certificate.jpg" alt="Сертификат авторизованного сервисного центра Unipump" style="border-radius: 8px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15); width: 100%; max-width: 400px; display: block; margin: 0 auto;">
+            </div>
+            <div class="about-content" data-aos="fade-left">
+                <h2 class="section-title" style="text-align: left;">О мастере</h2>
+                <h3>Саматов А.М.</h3>
+                <p class="master-exp">Опыт работы более 10 лет.</p>
+                <p class="master-desc">Являюсь сертифицированным специалистом по ремонту водонагревательного оборудования большинства мировых брендов. Моя цель — решить вашу проблему в день обращения быстро, качественно и с гарантией.</p>
+                <ul class="master-certs text-primary">
+                    <li><i class="fa-solid fa-check-circle"></i> Авторизованный сервисный центр Unipump</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Авторизованный мастер Thermex</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Диагностика на профессиональном гидростенде</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p><a href="tel:+79177473700">+7 (917) 747-37-00</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Адрес</h4>
+                            <p>г. Уфа, Туринская ул., 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-box">
+                    <h3>Заказать обратный звонок</h3>
+                    <p>Оставьте заявку, и мы перезвоним вам в течение 5 минут.</p>
+                    <form id="leadForm" class="form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone_input" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Жду звонка</button>
+                    </form>
+                    <div id="formSuccess" class="form-success" style="display:none;">
+                        <i class="fa-solid fa-circle-check"></i> Заявка успешно отправлена! Мы скоро свяжемся с вами.
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-wrapper" data-aos="fade-up" data-aos-delay="200" id="yandex-map" style="height: 400px; margin-top: 50px; border-radius: 16px; overflow: hidden;"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fa-solid fa-wrench text-primary"></i> АкваТехПрофи | ИП Саматов А.М.
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2026 Все права защищены. <br>ИНН: 027805587676 | ОГРНИП: 326028000048942</p>
+                </div>
+                <div class="footer-links" style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem;">
+                    <span>Работаем ежедневно 9:00-23:00</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Yandex Maps JS API -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=4e6a8d79-2ac0-4e32-a579-22a76fbc173f"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
