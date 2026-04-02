@@ -162,6 +162,7 @@ img {
     top: 0;
     z-index: 1000;
     transition: var(--transition);
+    overflow: hidden; /* Prevent horizontal scroll */
 }
 
 .header-container {
@@ -237,6 +238,8 @@ img {
     align-items: center;
     gap: 15px;
     flex-shrink: 0;
+    margin-left: auto; /* Push to right, keeping space from nav */
+    padding-left: 20px;
 }
 
 .header-city {
@@ -297,8 +300,14 @@ img {
         display: none;
     }
 
+    .header-contact {
+        margin-left: initial;
+        padding-left: 0;
+    }
+
     .burger-menu {
         display: block;
+        margin-left: 15px;
     }
 
     .mobile-only {
@@ -323,8 +332,8 @@ img {
     }
 
     .logo-title {
-        font-size: 0.6rem;
-        max-width: 150px;
+        font-size: 0.58rem;
+        max-width: 130px;
         line-height: 1.1;
     }
 
