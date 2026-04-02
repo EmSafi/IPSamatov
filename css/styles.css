@@ -291,9 +291,12 @@ img {
         gap: 20px;
     }
 
-    .header-contact .btn,
-    .header-city {
+    .header-contact .btn {
         display: none;
+    }
+
+    .header-city {
+        display: flex;
     }
 
     .burger-menu {
@@ -325,9 +328,10 @@ img {
         font-size: 0.7rem;
     }
 
+    .city-text,
     .phone-text {
         display: none;
-        /* Hide phone text on small screens, keep only the icon */
+        /* Hide text on small screens, keep only icons */
     }
 
     .phone i {
