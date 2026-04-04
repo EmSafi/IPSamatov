@@ -236,7 +236,6 @@ img {
     top: 0;
     z-index: 1000;
     transition: var(--transition);
-    overflow: hidden; /* Prevent horizontal scroll */
 }
 
 .header-container {
@@ -336,6 +335,8 @@ img {
     font-weight: 700;
     font-size: 1.1rem;
     color: #ffffff;
+    display: flex;
+    align-items: center;
 }
 
 .burger-menu {
@@ -375,13 +376,14 @@ img {
     }
 
     .header-contact {
-        margin-left: initial;
+        margin-left: auto; /* Push to the right but close to burger */
         padding-left: 0;
+        gap: 20px;
     }
 
     .burger-menu {
         display: block;
-        margin-left: 15px;
+        margin-left: 10px; /* Reduced gap between phone and burger */
     }
 
     .mobile-only {
@@ -542,11 +544,27 @@ img {
 
     .hero-buttons {
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row; /* Keep buttons side-by-side on tablet/large phones */
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero-contact-info {
+        text-align: center;
     }
 
     .hero-title {
         font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
     }
 }
 
@@ -639,14 +657,14 @@ img {
 }
 
 .service-list li {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    padding: 15px 10px;
+    padding: 12px 10px;
     border-bottom: 1px solid #eaeaea;
     transition: var(--transition);
-    border-radius: 6px;
-    gap: 15px;
+    border-radius: 8px;
+    gap: 20px;
 }
 
 .service-list li:last-child {
@@ -660,22 +678,42 @@ img {
 
 .service-name {
     font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--text-dark);
 }
 
 .service-price {
     font-weight: 700;
     color: var(--primary-color);
     background: #EFF6FF;
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-size: 0.95rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
     white-space: nowrap;
-    flex-shrink: 0;
-    min-width: 155px;
+    width: 140px; /* Fixed width for column alignment */
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #BFDBFE;
+}
+
+@media (max-width: 480px) {
+    .service-list li {
+        gap: 10px;
+        padding: 10px 5px;
+    }
+    
+    .service-price {
+        width: 110px;
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+    
+    .service-name {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 768px) {
