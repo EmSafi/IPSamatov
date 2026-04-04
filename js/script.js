@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Header Scroll effect
     const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
+    function checkScroll() {
         if (window.scrollY > 50) {
             header.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
             header.style.padding = '5px 0';
@@ -21,7 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
             header.style.padding = '0';
         }
-    });
+    }
+    
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Initial check
 
     // 1.5 Mobile Burger Menu Logic
     const burger = document.querySelector('.burger-menu');
